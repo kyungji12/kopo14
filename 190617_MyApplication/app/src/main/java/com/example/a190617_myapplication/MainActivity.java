@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -43,7 +44,9 @@ public class MainActivity extends AppCompatActivity {
                 intent = new Intent(getApplicationContext(), Main2_Login.class);
                 startActivity(intent);
 
-//            case R.id.home :
+            case android.R.id.home :
+                Toast.makeText(this, "홈버튼 눌림 ", Toast.LENGTH_LONG).show();
+                return true;
 //            case R.id.action_threeline :
 //                ((TextView)findViewById(R.id.main1_title)).setText(("MENU"));
 //                return true;

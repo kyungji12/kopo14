@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -70,7 +72,7 @@ public class Main2_Login extends AppCompatActivity {
                 gPHP = new GettingPHP();
                 gPHP.execute(url);
 
-                finish();
+
             }
         });
     }
@@ -138,15 +140,17 @@ public class Main2_Login extends AppCompatActivity {
                 }
 
                 if(idCheck == true) {
-                    Intent intent = new Intent(getApplicationContext(), Main2_Login.class);
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                     intent.putExtra("inputId", idStr);
                     intent.putExtra("inputPassword", passStr);
                     idCheck = false;
                     Toast.makeText(getApplicationContext(), "로그인 성공", Toast.LENGTH_SHORT).show();
                     startActivity(intent);
+                    finish();
                 }else {
                     Toast.makeText(getApplicationContext(), "ID 또는 비밀번호를 확인하세요.", Toast.LENGTH_SHORT).show();
                 }
+
             }catch(JSONException e){
                 e.printStackTrace();
                 Log.d("hello", e.toString());
@@ -155,28 +159,28 @@ public class Main2_Login extends AppCompatActivity {
         }
     }
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu){
-//        getMenuInflater().inflate(R.menu.appbar_action,menu);
-//        return true;
-//    }
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item){
-//        switch (item.getItemId()){
-//            case R.id.action_search :
-//                //((TextView)findViewById(R.id.main1_title)).setText(("SEARCH"));
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.appbar_action,menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch (item.getItemId()){
+            case R.id.action_search :
+                //((TextView)findViewById(R.id.main1_title)).setText(("SEARCH"));
+                return true;
+            case R.id.action_account :
+                //((TextView)findViewById(R.id.main1_title)).setText(("ACCOUNT"));
+//                intent = new Intent(getApplicationContext(), Main2_Login.class);
+//                startActivity(intent);
+
+//            case R.id.home :
+//            case R.id.action_threeline :
+//                ((TextView)findViewById(R.id.main1_title)).setText(("MENU"));
 //                return true;
-//            case R.id.action_account :
-//                //((TextView)findViewById(R.id.main1_title)).setText(("ACCOUNT"));
-////                intent = new Intent(getApplicationContext(), Main2_Login.class);
-////                startActivity(intent);
-//
-////            case R.id.home :
-////            case R.id.action_threeline :
-////                ((TextView)findViewById(R.id.main1_title)).setText(("MENU"));
-////                return true;
-//            default:
-//                return super.onOptionsItemSelected(item);
-//        }
-//    }
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 }
