@@ -9,49 +9,36 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="5">
-                <ImageView
-                    android:id="@+id/main2_menu"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/threelines"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:gravity="center">
-                <TextView
-                    android:id="@+id/main2_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="my class"
-                    android:layout_gravity="center"
-                    android:textSize="25dp"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:gravity="center">
-                <ImageView
-                    android:id="@+id/main2_personal"
-                    android:layout_width="50dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="bottom"
-                    android:layout_marginBottom="4.5dp"
-                    android:src="@drawable/personal"/>
-            </LinearLayout>
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        </LinearLayout>
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/main2_app_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/linearLayout">
+
+            <TextView
+                android:id="@+id/main1_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="STYLRA"
+                android:textColor="#000000"
+                android:textSize="25dp" />
+
+        </androidx.appcompat.widget.Toolbar>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -60,92 +47,101 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="5"/>
+                android:layout_weight="5" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
                 android:layout_weight="2"
-                android:orientation="vertical"
-                android:layout_gravity="center">
+                android:orientation="vertical">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="bottom">
+                    android:gravity="bottom"
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/main2_errText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text=""/>
+                        android:text="" />
+
                     <Button
                         android:id="@+id/main2_FB_login"
                         android:layout_width="270dp"
                         android:layout_height="wrap_content"
-                        android:text="페이스북 아이디로 로그인"
-                        android:background="#6C83B4"
-                        android:textColor="#FFFFFF"
                         android:layout_marginBottom="10dp"
-                        />
+                        android:background="#6C83B4"
+                        android:text="페이스북 아이디로 로그인"
+                        android:textColor="#FFFFFF" />
+
                     <Button
                         android:id="@+id/main2_Naver_login"
                         android:layout_width="270dp"
                         android:layout_height="wrap_content"
+                        android:background="#1EC601"
                         android:text="네이버 아이디로 로그인"
-                        android:textColor="#FFFFFF"
-                        android:background="#1EC601"/>
+                        android:textColor="#FFFFFF" />
+
                     <EditText
                         android:id="@+id/main2_id"
                         android:layout_width="270dp"
                         android:layout_height="wrap_content"
-                        android:hint="이메일 주소 입력"/>
-                   <EditText
+                        android:hint="이메일 주소 입력" />
+
+                    <EditText
                         android:id="@+id/main2_pw"
                         android:layout_width="270dp"
                         android:layout_height="wrap_content"
-                        android:hint="비밀번호 입력"/>
+                        android:hint="비밀번호 입력" />
+
                     <Button
                         android:id="@+id/main2_login"
                         android:layout_width="270dp"
                         android:layout_height="wrap_content"
-                        android:text="로그인"
-                        />
+                        android:text="로그인" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:orientation="horizontal"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="15dp"
+                        android:layout_gravity="top
+"
                         android:layout_marginTop="20dp"
                         android:text="아직 계정이 없으세요?"
-                        android:layout_gravity="top
-"/>
+                        android:textSize="15dp" />
+
                     <TextView
                         android:id="@+id/main2_signIn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="15dp"
-                        android:text="회원가입"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginLeft="20dp"
-                        android:textColor="#2196F3"
                         android:layout_gravity="top
-"/>
+"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="회원가입"
+                        android:textColor="#2196F3"
+                        android:textSize="15dp" />
 
                 </LinearLayout>
 
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="5"/>
+                android:layout_weight="5" />
 
         </LinearLayout>
     </LinearLayout>

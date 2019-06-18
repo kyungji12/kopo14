@@ -4,38 +4,28 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
-    ImageView login;
     Intent intent;
-    Toolbar tb;
-
-    ActionBar ab = getSupportActionBar();
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        tb = findViewById(R.id.app_toolbar);
-        setSupportActionBar(tb);
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        login = findViewById(R.id.main1_login);
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                intent = new Intent(getApplicationContext(), Main2_Login.class);
-                startActivity(intent);
+        //툴바 사용설정
+        toolbar = findViewById(R.id.app_toolbar);
+        setSupportActionBar(toolbar);  //이 액티비티에서 툴바를 사용하겠다는 선언.
 
-            }
-        });
+
+        getSupportActionBar().setDisplayShowCustomEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_dehaze_black_24dp);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
@@ -46,14 +36,17 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()){
             case R.id.action_search :
-                ((TextView)findViewById(R.id.textView)).setText(("SEARCH"));
+                //((TextView)findViewById(R.id.main1_title)).setText(("SEARCH"));
                 return true;
             case R.id.action_account :
-                ((TextView)findViewById(R.id.textView)).setText(("ACCOUNT"));
-                return true;
-            case R.id.action_settings :
-                ((TextView)findViewById(R.id.textView)).setText(("SETTINGS"));
-                return true;
+                //((TextView)findViewById(R.id.main1_title)).setText(("ACCOUNT"));
+                intent = new Intent(getApplicationContext(), Main2_Login.class);
+                startActivity(intent);
+
+//            case R.id.home :
+//            case R.id.action_threeline :
+//                ((TextView)findViewById(R.id.main1_title)).setText(("MENU"));
+//                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

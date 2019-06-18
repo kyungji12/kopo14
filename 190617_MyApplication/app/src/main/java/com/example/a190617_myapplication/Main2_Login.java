@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -25,11 +26,12 @@ import java.util.List;
 
 
 public class Main2_Login extends AppCompatActivity {
-
     //데이터를 받아올 PHP주소
     String url = "http://192.168.56.101/android/login.php";
+
     //데이터를 보기위한 TextView
     TextView textViewJudge;
+
     //PHP를 읽어올 때 사용할 변수
     public GettingPHP gPHP;
     boolean idCheck = false;
@@ -38,6 +40,8 @@ public class Main2_Login extends AppCompatActivity {
     EditText idEdit, passEdit;
     String idStr, passStr;
     Button loginProcess;
+    Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle saveInstanceState){
         super.onCreate(saveInstanceState);
@@ -48,6 +52,15 @@ public class Main2_Login extends AppCompatActivity {
         loginProcess = (Button)findViewById(R.id.main2_login);
         textViewJudge = (TextView)findViewById(R.id.main2_errText);
 
+        //툴바 사용설정
+        toolbar = findViewById(R.id.main2_app_toolbar);
+        setSupportActionBar(toolbar);  //이 액티비티에서 툴바를 사용하겠다는 선언.
+
+        getSupportActionBar().setDisplayShowCustomEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_dehaze_black_24dp);
+
         loginProcess.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -57,7 +70,7 @@ public class Main2_Login extends AppCompatActivity {
                 gPHP = new GettingPHP();
                 gPHP.execute(url);
 
-finish();
+                finish();
             }
         });
     }
@@ -141,4 +154,29 @@ finish();
             }
         }
     }
+
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu){
+//        getMenuInflater().inflate(R.menu.appbar_action,menu);
+//        return true;
+//    }
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item){
+//        switch (item.getItemId()){
+//            case R.id.action_search :
+//                //((TextView)findViewById(R.id.main1_title)).setText(("SEARCH"));
+//                return true;
+//            case R.id.action_account :
+//                //((TextView)findViewById(R.id.main1_title)).setText(("ACCOUNT"));
+////                intent = new Intent(getApplicationContext(), Main2_Login.class);
+////                startActivity(intent);
+//
+////            case R.id.home :
+////            case R.id.action_threeline :
+////                ((TextView)findViewById(R.id.main1_title)).setText(("MENU"));
+////                return true;
+//            default:
+//                return super.onOptionsItemSelected(item);
+//        }
+//    }
 }
