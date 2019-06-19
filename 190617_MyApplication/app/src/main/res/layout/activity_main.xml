@@ -4,28 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.a190617_myapplication.MainActivity">
+    tools:context="com.example.a190617_myapplication.activity.MainActivity">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/main1_linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         >
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
             <androidx.appcompat.widget.Toolbar
-                android:id="@+id/app_toolbar"
+                android:id="@+id/main1_app_toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#FFFFFF"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/linearLayout">
+                app:layout_constraintStart_toStartOf="parent">
 
                 <TextView
                     android:id="@+id/main1_title"
@@ -38,64 +31,206 @@
 
             </androidx.appcompat.widget.Toolbar>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:background="@drawable/bacgroundpic">
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/container">
 
-            </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
+        </androidx.viewpager.widget.ViewPager>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_weight="12">
+        <!--<ScrollView-->
+            <!--android:id="@+id/main1_scrollView"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_below="@+id/main1_linearLayout"-->
+            <!--android:layout_centerHorizontal="true">-->
 
-                    <Button
-                        android:id="@+id/main1_project"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:background="#FFFFFF"
-                        android:text="에디터 추천 프로젝트 " />
+            <!--<LinearLayout-->
+                <!--android:id="@+id/main1_linearLayout1"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical">-->
 
-                    <Button
-                        android:id="@+id/main1_prev"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:background="#FFFFFF"
-                        android:text="＜" />
 
-                    <Button
-                        android:id="@+id/main1_next"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:background="#FFFFFF"
-                        android:text="＞" />
-                </LinearLayout>
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/main1_linearLayout2"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:gravity="center">-->
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    <!--<ImageButton-->
+                        <!--android:id="@+id/main1_backBtn"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:src="@drawable/ic_arrow_back_black_24dp" />-->
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/backgroundpic2" />
-                </LinearLayout>
-            </LinearLayout>
+                    <!--<Button-->
+                        <!--android:id="@+id/main1_categoryBtn"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_margin="3dp"-->
+                        <!--android:paddingLeft="130dp"-->
+                        <!--android:paddingRight="130dp"-->
+                        <!--android:text="Dress"-->
+                        <!--android:textAllCaps="false" />-->
 
-        </LinearLayout>
+                    <!--<ImageButton-->
+                        <!--android:id="@+id/main1_forwardBtn"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:src="@drawable/ic_arrow_forward_black_24dp" />-->
+                <!--</LinearLayout>-->
+
+                <!--&lt;!&ndash;<androidx.viewpager.widget.ViewPager&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="match_parent">&ndash;&gt;-->
+
+                <!--<TableLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent">-->
+
+                    <!--<TableRow-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:orientation="horizontal">-->
+
+                        <!--<ImageButton-->
+                            <!--android:layout_width="195dp"-->
+                            <!--android:layout_height="225dp"-->
+                            <!--android:layout_marginLeft="8dp"-->
+                            <!--android:layout_marginTop="5dp"-->
+                            <!--android:scaleType="centerCrop"-->
+                            <!--android:src="@drawable/cat1" />-->
+
+                        <!--<ImageButton-->
+                            <!--android:layout_width="195dp"-->
+                            <!--android:layout_height="225dp"-->
+                            <!--android:layout_marginTop="5dp"-->
+                            <!--android:layout_marginLeft="8dp"-->
+                            <!--android:scaleType="centerCrop"-->
+                            <!--android:src="@drawable/cat2" />-->
+
+                    <!--</TableRow>-->
+                    <!--<TableRow-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:orientation="horizontal">-->
+
+                        <!--<ImageButton-->
+                            <!--android:layout_width="195dp"-->
+                            <!--android:layout_height="225dp"-->
+                            <!--android:layout_marginTop="5dp"-->
+                            <!--android:layout_marginLeft="8dp"-->
+                            <!--android:scaleType="centerCrop"-->
+                            <!--android:src="@drawable/cat3" />-->
+
+                        <!--<ImageButton-->
+                            <!--android:layout_width="195dp"-->
+                            <!--android:layout_height="225dp"-->
+                            <!--android:layout_marginTop="5dp"-->
+                            <!--android:layout_marginLeft="8dp"-->
+                            <!--android:scaleType="centerCrop"-->
+                            <!--android:src="@drawable/cat4" />-->
+
+                    <!--</TableRow>-->
+                    <!--<TableRow-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:orientation="horizontal">-->
+
+                        <!--<ImageButton-->
+                            <!--android:layout_width="195dp"-->
+                            <!--android:layout_height="225dp"-->
+                            <!--android:layout_marginTop="5dp"-->
+                            <!--android:layout_marginLeft="8dp"-->
+                            <!--android:scaleType="centerCrop"-->
+                            <!--android:src="@drawable/cat5" />-->
+
+                        <!--<ImageButton-->
+                            <!--android:layout_width="195dp"-->
+                            <!--android:layout_height="225dp"-->
+                            <!--android:layout_marginTop="5dp"-->
+                            <!--android:layout_marginLeft="8dp"-->
+                            <!--android:scaleType="centerCrop"-->
+                            <!--android:src="@drawable/cat6" />-->
+
+                    <!--</TableRow>-->
+                    <!--<TableRow-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:orientation="horizontal">-->
+
+                        <!--<ImageButton-->
+                            <!--android:layout_width="195dp"-->
+                            <!--android:layout_height="225dp"-->
+                            <!--android:layout_marginTop="5dp"-->
+                            <!--android:layout_marginLeft="8dp"-->
+                            <!--android:scaleType="centerCrop"-->
+                            <!--android:src="@drawable/cat7" />-->
+
+                        <!--<ImageButton-->
+                            <!--android:layout_width="195dp"-->
+                            <!--android:layout_height="225dp"-->
+                            <!--android:layout_marginTop="5dp"-->
+                            <!--android:layout_marginLeft="8dp"-->
+                            <!--android:scaleType="centerCrop"-->
+                            <!--android:src="@drawable/cat1" />-->
+
+                    <!--</TableRow>-->
+                    <!--<TableRow-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:orientation="horizontal">-->
+
+                        <!--<ImageButton-->
+                            <!--android:layout_width="195dp"-->
+                            <!--android:layout_height="225dp"-->
+                            <!--android:layout_marginTop="5dp"-->
+                            <!--android:layout_marginLeft="8dp"-->
+                            <!--android:scaleType="centerCrop"-->
+                            <!--android:src="@drawable/cat2" />-->
+
+                        <!--<ImageButton-->
+                            <!--android:layout_width="195dp"-->
+                            <!--android:layout_height="225dp"-->
+                            <!--android:layout_marginTop="5dp"-->
+                            <!--android:layout_marginLeft="8dp"-->
+                            <!--android:scaleType="centerCrop"-->
+                            <!--android:src="@drawable/cat3" />-->
+
+                    <!--</TableRow>-->
+                    <!--<TableRow-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:orientation="horizontal">-->
+
+                        <!--<ImageButton-->
+                            <!--android:layout_width="195dp"-->
+                            <!--android:layout_height="225dp"-->
+                            <!--android:layout_marginTop="5dp"-->
+                            <!--android:layout_marginLeft="8dp"-->
+                            <!--android:scaleType="centerCrop"-->
+                            <!--android:src="@drawable/cat4" />-->
+
+                        <!--<ImageButton-->
+                            <!--android:layout_width="195dp"-->
+                            <!--android:layout_height="225dp"-->
+                            <!--android:layout_marginTop="5dp"-->
+                            <!--android:layout_marginLeft="8dp"-->
+                            <!--android:scaleType="centerCrop"-->
+                            <!--android:src="@drawable/cat5" />-->
+
+                    <!--</TableRow>-->
+
+                <!--</TableLayout>-->
+                <!--&lt;!&ndash;</androidx.viewpager.widget.ViewPager>&ndash;&gt;-->
+
+
+            <!--</LinearLayout>-->
+
+        <!--</ScrollView>-->
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

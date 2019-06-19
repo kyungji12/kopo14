@@ -4,23 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Main3_AfterLogin">
+    tools:context=".activity.Main3_AfterLogin">
 
     <LinearLayout
+        android:id="@+id/main3_linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/main2_app_toolbar"
+            android:id="@+id/main3_app_toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/linearLayout">
+            app:layout_constraintTop_toTopOf="@+id/main3_linearLayout">
 
             <TextView
-                android:id="@+id/main1_title"
+                android:id="@+id/main3_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

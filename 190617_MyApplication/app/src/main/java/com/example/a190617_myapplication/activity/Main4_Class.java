@@ -1,4 +1,4 @@
-package com.example.a190617_myapplication;
+package com.example.a190617_myapplication.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,18 +9,19 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.a190617_myapplication.R;
+
+public class Main4_Class extends AppCompatActivity {
     Intent intent;
     Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+        setContentView(R.layout.activity_main3__after_login);
         //툴바 사용설정
-        toolbar = findViewById(R.id.app_toolbar);
-        setSupportActionBar(toolbar);  //이 액티비티에서 툴바를 사용하겠다는 선언.
+        toolbar = findViewById(R.id.main4_app_toolbar);
+        setSupportActionBar(toolbar); //이 액티비티에서 툴바를 사용하겠다는 선언.
 
 
         getSupportActionBar().setDisplayShowCustomEnabled(true);
@@ -41,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.action_account :
                 //((TextView)findViewById(R.id.main1_title)).setText(("ACCOUNT"));
-                intent = new Intent(getApplicationContext(), Main2_Login.class);
-                startActivity(intent);
+//                intent = new Intent(getApplicationContext(), Main2_Login.class);
+//                startActivity(intent);
 
             case android.R.id.home :
                 Toast.makeText(this, "홈버튼 눌림 ", Toast.LENGTH_LONG).show();

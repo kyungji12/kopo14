@@ -1,4 +1,4 @@
-package com.example.a190617_myapplication;
+package com.example.a190617_myapplication.activity;
 
 public class AccountList {
     private String accountId;

@@ -1,4 +1,4 @@
-package com.example.a190617_myapplication;
+package com.example.a190617_myapplication.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +9,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-public class Main4_Class extends AppCompatActivity {
+import com.example.a190617_myapplication.R;
+
+public class Main3_AfterLogin extends AppCompatActivity {
     Intent intent;
     Toolbar toolbar;
 
@@ -18,7 +20,7 @@ public class Main4_Class extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3__after_login);
         //툴바 사용설정
-        toolbar = findViewById(R.id.app_toolbar);
+        toolbar = findViewById(R.id.main3_app_toolbar);
         setSupportActionBar(toolbar); //이 액티비티에서 툴바를 사용하겠다는 선언.
 
 

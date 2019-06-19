@@ -1,4 +1,4 @@
-package com.example.a190617_myapplication;
+package com.example.a190617_myapplication.activity;
 
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -15,6 +15,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.example.a190617_myapplication.R;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -29,7 +31,7 @@ import java.util.List;
 
 public class Main2_Login extends AppCompatActivity {
     //데이터를 받아올 PHP주소
-    String url = "http://192.168.56.101/android/login.php";
+    String url = "http://192.168.23.95/android/login.php";
 
     //데이터를 보기위한 TextView
     TextView textViewJudge;
