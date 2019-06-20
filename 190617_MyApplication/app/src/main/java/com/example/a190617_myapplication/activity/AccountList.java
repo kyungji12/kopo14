@@ -1,8 +1,8 @@
 package com.example.a190617_myapplication.activity;
 
-public class AccountList {
-    private String accountId;
-    private String accountPw;
+public class AccountList {      //회원 관리 Class
+    private String accountId;       //회원 아이디 String
+    private String accountPw;       //회원 비밀번호 String
 
     public AccountList(String accountId, String accountPw){
         this.accountId = accountId;

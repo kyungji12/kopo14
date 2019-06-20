@@ -33,20 +33,20 @@ import java.util.List;
 public class Main2_Login extends AppCompatActivity {
     //데이터를 받아올 PHP주소
     String url = "http://192.168.23.95/android/login.php";
-
     //데이터를 보기위한 TextView
     TextView textViewJudge;
-
     //PHP를 읽어올 때 사용할 변수
     public GettingPHP gPHP;
+    //ID, PW를 체크할때 기본값은 false
     boolean idCheck = false;
+    //회원 관리용 리스트
     List<AccountList> userList = new ArrayList<AccountList>();
 
     EditText idEdit, passEdit;
     String idStr, passStr;
     Button loginProcess;
     Toolbar toolbar;
-    TextView join;
+    TextView join, home;
     Intent intent;
 
     @Override
@@ -54,13 +54,32 @@ public class Main2_Login extends AppCompatActivity {
         super.onCreate(saveInstanceState);
         setContentView(R.layout.activity_main2__login);
 
+        //툴바 사용설정
+        toolbar = findViewById(R.id.main2_app_toolbar);
+        setSupportActionBar(toolbar);  //이 액티비티에서 툴바를 사용하겠다는 선언.
+        getSupportActionBar().setDisplayShowCustomEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);//기본타이틀은 보이지 않겠다.
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_dehaze_black_24dp);
+
+        //STYLERA 누르면 홈으로 이동하기
+        home = (TextView)findViewById(R.id.main2_title);
+        home.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        //로그인 처리
         idEdit = (EditText)findViewById(R.id.main2_id);
         passEdit = (EditText)findViewById(R.id.main2_pw);
         passEdit.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-
         loginProcess = (Button)findViewById(R.id.main2_login);
         textViewJudge = (TextView)findViewById(R.id.main2_errText);
 
+        //로그인 버튼 누르면 로그인
         join = (TextView)findViewById(R.id.main2_joinIn);
         join.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -70,26 +89,13 @@ public class Main2_Login extends AppCompatActivity {
             }
         });
 
-
-        //툴바 사용설정
-        toolbar = findViewById(R.id.main2_app_toolbar);
-        setSupportActionBar(toolbar);  //이 액티비티에서 툴바를 사용하겠다는 선언.
-
-        getSupportActionBar().setDisplayShowCustomEnabled(true);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_dehaze_black_24dp);
-
         loginProcess.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 idStr = idEdit.getText().toString();
                 passStr = passEdit.getText().toString();
-
                 gPHP = new GettingPHP();
                 gPHP.execute(url);
-
-
             }
         });
     }
@@ -110,7 +116,7 @@ public class Main2_Login extends AppCompatActivity {
         protected void onPreExecute() {
             super.onPreExecute();
         }
-
+//서버 연결하는 코드
         @Override
         protected String doInBackground(String...url){
             StringBuilder jsonHtml = new StringBuilder();
@@ -146,7 +152,7 @@ public class Main2_Login extends AppCompatActivity {
                 JSONObject jObject = new JSONObject(str);
                 //results라는 key는 JSON배열로 되어있다.
                 JSONArray results = jObject.getJSONArray("results");
-
+                //ID와 PW가 같은지 확인
                 for (int i=0; i<results.length(); ++i){
                     JSONObject temp = results.getJSONObject(i);
                     userList.add(new AccountList(temp.get("ID").toString(),temp.get("Password").toString()));
@@ -155,7 +161,7 @@ public class Main2_Login extends AppCompatActivity {
                 for(AccountList user : userList){
                     if(idStr.equals(user.getAccountId()) && passStr.equals(user.getAccountPw())) idCheck = true;
                 }
-
+                //ID와 PW정보가 일치할 경우
                 if(idCheck == true) {
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                     intent.putExtra("inputId", idStr);
@@ -188,10 +194,6 @@ public class Main2_Login extends AppCompatActivity {
                 //((TextView)findViewById(R.id.main1_title)).setText(("SEARCH"));
                 return true;
             case R.id.action_account :
-                //((TextView)findViewById(R.id.main1_title)).setText(("ACCOUNT"));
-//                intent = new Intent(getApplicationContext(), Main2_Login.class);
-//                startActivity(intent);
-
 //            case R.id.home :
 //            case R.id.action_threeline :
 //                ((TextView)findViewById(R.id.main1_title)).setText(("MENU"));

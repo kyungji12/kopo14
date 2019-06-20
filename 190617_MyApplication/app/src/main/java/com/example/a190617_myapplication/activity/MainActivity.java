@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,7 +21,7 @@ import com.example.a190617_myapplication.fragment.Fragment3_Dress;
 public class MainActivity extends AppCompatActivity {
     Intent intent;
     Toolbar toolbar;
-
+    TextView home;
     private SectionsStatePagerAdapter mSectionStatePagerAdapter;
     private ViewPager mViewPager;
 
@@ -31,17 +33,26 @@ public class MainActivity extends AppCompatActivity {
         //툴바 사용설정
         toolbar = findViewById(R.id.main1_app_toolbar);
         setSupportActionBar(toolbar);  //이 액티비티에서 툴바를 사용하겠다는 선언.
+        getSupportActionBar().setDisplayShowCustomEnabled(true); //커스터마이징하겠당
+        getSupportActionBar().setDisplayShowTitleEnabled(false); //기본타이틀은 보이지 않겠다.
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true); //왼쪽 메뉴 아이콘
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_dehaze_black_24dp);
+
+        //STYLERA 누르면 홈으로 이동하기
+        home = (TextView)findViewById(R.id.main1_title);
+        home.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
         //fragment
         mSectionStatePagerAdapter = new SectionsStatePagerAdapter(getSupportFragmentManager());
         mViewPager = (ViewPager)findViewById(R.id.container);
         setupViewPaager(mViewPager);
 
-
-        getSupportActionBar().setDisplayShowCustomEnabled(true); //커스터마이징하겠당
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true); //왼쪽 메뉴 아이콘
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_dehaze_black_24dp);
     }
 
     private void setupViewPaager(ViewPager viewPager){
@@ -69,12 +80,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_account:
                 intent = new Intent(getApplicationContext(), Main2_Login.class);
                 startActivity(intent);
-
+                return true;
             case android.R.id.home:
                 Toast.makeText(this, "홈버튼 눌림 ", Toast.LENGTH_LONG).show();
                 return true;
-
-
             default:
                 return super.onOptionsItemSelected(item);
         }
