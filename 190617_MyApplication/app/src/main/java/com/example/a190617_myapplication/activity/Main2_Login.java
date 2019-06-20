@@ -3,6 +3,7 @@ package com.example.a190617_myapplication.activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.InputType;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -45,6 +46,8 @@ public class Main2_Login extends AppCompatActivity {
     String idStr, passStr;
     Button loginProcess;
     Toolbar toolbar;
+    TextView join;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle saveInstanceState){
@@ -53,8 +56,20 @@ public class Main2_Login extends AppCompatActivity {
 
         idEdit = (EditText)findViewById(R.id.main2_id);
         passEdit = (EditText)findViewById(R.id.main2_pw);
+        passEdit.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+
         loginProcess = (Button)findViewById(R.id.main2_login);
         textViewJudge = (TextView)findViewById(R.id.main2_errText);
+
+        join = (TextView)findViewById(R.id.main2_joinIn);
+        join.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                intent = new Intent(getApplicationContext(), JoinActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         //툴바 사용설정
         toolbar = findViewById(R.id.main2_app_toolbar);
@@ -88,7 +103,7 @@ public class Main2_Login extends AppCompatActivity {
     protected void onResume() {
             super.onResume();
     }
-
+//서버 연결할 때 필요한 쓰레드 AsyncTask
     class GettingPHP extends AsyncTask<String,Integer,String> {
 
         @Override
@@ -125,7 +140,7 @@ public class Main2_Login extends AppCompatActivity {
             return jsonHtml.toString();
         }
         protected void onPostExecute(String str){
-//            textViewJudge.setText("ID");
+            /*서버 연결*/
             try{
                 //PHP에서 받아온 JSON 데이터를 JSON오브젝트로 변환
                 JSONObject jObject = new JSONObject(str);

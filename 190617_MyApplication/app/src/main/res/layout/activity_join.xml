@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.Main2_Login">
+    tools:context=".activity.JoinActivity">
 
     <LinearLayout
-        android:id="@+id/main2_linearLayout"
+        android:id="@+id/join_linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/main2_app_toolbar"
+            android:id="@+id/join_app_toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#FFFFFF"
@@ -22,7 +22,7 @@
             app:layout_constraintTop_toTopOf="@+id/main2_linearLayout">
 
             <TextView
-                android:id="@+id/main2_title"
+                android:id="@+id/join_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -55,77 +55,33 @@
                     android:layout_weight="1"
                     android:gravity="bottom"
                     android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/main2_errText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="" />
-
-                    <Button
-                        android:id="@+id/main2_FB_login"
-                        android:layout_width="270dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:background="#6C83B4"
-                        android:text="페이스북 아이디로 로그인"
-                        android:textColor="#FFFFFF" />
-
-                    <Button
-                        android:id="@+id/main2_Naver_login"
-                        android:layout_width="270dp"
-                        android:layout_height="wrap_content"
-                        android:background="#1EC601"
-                        android:text="네이버 아이디로 로그인"
-                        android:textColor="#FFFFFF" />
-
                     <EditText
-                        android:id="@+id/main2_id"
+                        android:id="@+id/join_id"
                         android:layout_width="270dp"
                         android:layout_height="wrap_content"
-                        android:hint="이메일 주소 입력" />
-
+                        android:hint="아이디 입력"
+                        android:layout_marginBottom="10dp"/>
                     <EditText
-                        android:id="@+id/main2_pw"
+                        android:id="@+id/join_pw"
                         android:layout_width="270dp"
                         android:layout_height="wrap_content"
-                        android:hint="비밀번호 입력" />
-
-                    <Button
-                        android:id="@+id/main2_login"
-                        android:layout_width="270dp"
-                        android:layout_height="wrap_content"
-                        android:text="로그인" />
+                        android:hint="비밀번호 입력"
+                        android:layout_marginBottom="10dp"/>
                 </LinearLayout>
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                    android:layout_weight="1">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <Button
+                        android:id="@+id/join_join"
+                        android:layout_width="270dp"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="top
-"
-                        android:layout_marginTop="20dp"
-                        android:text="아직 계정이 없으세요?"
-                        android:textSize="15dp" />
-
-                    <TextView
-                        android:id="@+id/main2_joinIn"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="top"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="20dp"
-                        android:text="회원가입"
-                        android:textColor="#2196F3"
-                        android:textSize="15dp" />
+                        android:text="회원가입" />
 
                 </LinearLayout>
+
+
 
 
             </LinearLayout>
@@ -139,3 +95,4 @@
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
