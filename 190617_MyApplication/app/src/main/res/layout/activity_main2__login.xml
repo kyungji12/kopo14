@@ -64,7 +64,7 @@
 
                     <Button
                         android:id="@+id/main2_FB_login"
-                        android:layout_width="270dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
                         android:background="#6C83B4"
@@ -73,7 +73,7 @@
 
                     <Button
                         android:id="@+id/main2_Naver_login"
-                        android:layout_width="270dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="#1EC601"
                         android:text="네이버 아이디로 로그인"
@@ -81,19 +81,19 @@
 
                     <EditText
                         android:id="@+id/main2_id"
-                        android:layout_width="270dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="이메일 주소 입력" />
 
                     <EditText
                         android:id="@+id/main2_pw"
-                        android:layout_width="270dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="비밀번호 입력" />
 
                     <Button
                         android:id="@+id/main2_login"
-                        android:layout_width="270dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="로그인" />
                 </LinearLayout>

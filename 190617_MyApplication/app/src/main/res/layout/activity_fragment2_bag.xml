@@ -25,12 +25,10 @@
                     android:src="@drawable/ic_arrow_back_black_24dp" />
 
                 <Button
-                    android:id="@+id/fm2_categoryBtn"
+                    android:id="@+id/fm1_categoryBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_margin="3dp"
-                    android:paddingLeft="130dp"
-                    android:paddingRight="130dp"
                     android:text="Bag"
                     android:textAllCaps="false" />
 
@@ -53,8 +51,6 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-
-
                     <TableLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
@@ -62,14 +58,16 @@
                         <TableRow
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:orientation="horizontal">
+                            android:orientation="horizontal"
+                            android:layout_weight="1">
 
                             <LinearLayout
-                                android:layout_width="195dp"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_weight="1">
                                 <ImageButton
-                                    android:layout_width="195dp"
+                                    android:layout_width="match_parent"
                                     android:layout_height="225dp"
                                     android:layout_marginLeft="8dp"
                                     android:layout_marginTop="5dp"
@@ -77,19 +75,17 @@
                                     android:src="@drawable/cat1" />
                                 <TextView
                                     android:id="@+id/bag_name1"
-                                    android:layout_width="195dp"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:textSize="15dp"
-                                    android:layout_marginLeft="8dp"
                                     android:textColor="#000"
                                     android:gravity="center"
                                     android:text="고양이"/>
                                 <TextView
                                     android:id="@+id/bag_desc1"
-                                    android:layout_width="195dp"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:textSize="12dp"
-                                    android:layout_marginLeft="8dp"
                                     android:textColor="#666666"
                                     android:gravity="center"
                                     android:text="고양이"/>
@@ -100,11 +96,12 @@
 
 
                             <LinearLayout
-                                android:layout_width="195dp"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_weight="1">
                                 <ImageButton
-                                    android:layout_width="195dp"
+                                    android:layout_width="match_parent"
                                     android:layout_height="225dp"
                                     android:layout_marginLeft="8dp"
                                     android:layout_marginTop="5dp"
@@ -112,19 +109,17 @@
                                     android:src="@drawable/cat2" />
                                 <TextView
                                     android:id="@+id/bag_name2"
-                                    android:layout_width="195dp"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:textSize="15dp"
-                                    android:layout_marginLeft="8dp"
                                     android:textColor="#000"
                                     android:gravity="center"
                                     android:text="고양이"/>
                                 <TextView
                                     android:id="@+id/bag_desc2"
-                                    android:layout_width="195dp"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:textSize="12dp"
-                                    android:layout_marginLeft="8dp"
                                     android:textColor="#666666"
                                     android:gravity="center"
                                     android:text="고양이"/>
@@ -136,14 +131,16 @@
                         <TableRow
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:orientation="horizontal">
+                            android:orientation="horizontal"
+                            android:layout_weight="1">
 
                             <LinearLayout
-                                android:layout_width="195dp"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_weight="1">
                                 <ImageButton
-                                    android:layout_width="195dp"
+                                    android:layout_width="match_parent"
                                     android:layout_height="225dp"
                                     android:layout_marginLeft="8dp"
                                     android:layout_marginTop="5dp"
@@ -151,19 +148,17 @@
                                     android:src="@drawable/cat3" />
                                 <TextView
                                     android:id="@+id/bag_name3"
-                                    android:layout_width="195dp"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:textSize="15dp"
-                                    android:layout_marginLeft="8dp"
                                     android:textColor="#000"
                                     android:gravity="center"
                                     android:text="고양이"/>
                                 <TextView
                                     android:id="@+id/bag_desc3"
-                                    android:layout_width="195dp"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:textSize="12dp"
-                                    android:layout_marginLeft="8dp"
                                     android:textColor="#666666"
                                     android:gravity="center"
                                     android:text="고양이"/>
@@ -171,12 +166,15 @@
 
                             </LinearLayout>
 
+
+
                             <LinearLayout
-                                android:layout_width="195dp"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_weight="1">
                                 <ImageButton
-                                    android:layout_width="195dp"
+                                    android:layout_width="match_parent"
                                     android:layout_height="225dp"
                                     android:layout_marginLeft="8dp"
                                     android:layout_marginTop="5dp"
@@ -184,19 +182,17 @@
                                     android:src="@drawable/cat4" />
                                 <TextView
                                     android:id="@+id/bag_name4"
-                                    android:layout_width="195dp"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:textSize="15dp"
-                                    android:layout_marginLeft="8dp"
                                     android:textColor="#000"
                                     android:gravity="center"
                                     android:text="고양이"/>
                                 <TextView
                                     android:id="@+id/bag_desc4"
-                                    android:layout_width="195dp"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:textSize="12dp"
-                                    android:layout_marginLeft="8dp"
                                     android:textColor="#666666"
                                     android:gravity="center"
                                     android:text="고양이"/>
@@ -208,14 +204,16 @@
                         <TableRow
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:orientation="horizontal">
+                            android:orientation="horizontal"
+                            android:layout_weight="1">
 
                             <LinearLayout
-                                android:layout_width="195dp"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_weight="1">
                                 <ImageButton
-                                    android:layout_width="195dp"
+                                    android:layout_width="match_parent"
                                     android:layout_height="225dp"
                                     android:layout_marginLeft="8dp"
                                     android:layout_marginTop="5dp"
@@ -223,19 +221,17 @@
                                     android:src="@drawable/cat5" />
                                 <TextView
                                     android:id="@+id/bag_name5"
-                                    android:layout_width="195dp"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:textSize="15dp"
-                                    android:layout_marginLeft="8dp"
                                     android:textColor="#000"
                                     android:gravity="center"
                                     android:text="고양이"/>
                                 <TextView
                                     android:id="@+id/bag_desc5"
-                                    android:layout_width="195dp"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:textSize="12dp"
-                                    android:layout_marginLeft="8dp"
                                     android:textColor="#666666"
                                     android:gravity="center"
                                     android:text="고양이"/>
@@ -246,11 +242,12 @@
 
 
                             <LinearLayout
-                                android:layout_width="195dp"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_weight="1">
                                 <ImageButton
-                                    android:layout_width="195dp"
+                                    android:layout_width="match_parent"
                                     android:layout_height="225dp"
                                     android:layout_marginLeft="8dp"
                                     android:layout_marginTop="5dp"
@@ -258,19 +255,17 @@
                                     android:src="@drawable/cat6" />
                                 <TextView
                                     android:id="@+id/bag_name6"
-                                    android:layout_width="195dp"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:textSize="15dp"
-                                    android:layout_marginLeft="8dp"
                                     android:textColor="#000"
                                     android:gravity="center"
                                     android:text="고양이"/>
                                 <TextView
                                     android:id="@+id/bag_desc6"
-                                    android:layout_width="195dp"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:textSize="12dp"
-                                    android:layout_marginLeft="8dp"
                                     android:textColor="#666666"
                                     android:gravity="center"
                                     android:text="고양이"/>
@@ -279,6 +274,154 @@
                             </LinearLayout>
 
                         </TableRow>
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_weight="1">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_weight="1">
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="225dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginTop="5dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/cat7" />
+                                <TextView
+                                    android:id="@+id/bag_name7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="15dp"
+                                    android:textColor="#000"
+                                    android:gravity="center"
+                                    android:text="고양이"/>
+                                <TextView
+                                    android:id="@+id/bag_desc7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12dp"
+                                    android:textColor="#666666"
+                                    android:gravity="center"
+                                    android:text="고양이"/>
+
+
+                            </LinearLayout>
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_weight="1">
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="225dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginTop="5dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/cat1" />
+                                <TextView
+                                    android:id="@+id/bag_name8"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="15dp"
+                                    android:textColor="#000"
+                                    android:gravity="center"
+                                    android:text="고양이"/>
+                                <TextView
+                                    android:id="@+id/bag_desc8"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12dp"
+                                    android:textColor="#666666"
+                                    android:gravity="center"
+                                    android:text="고양이"/>
+
+
+                            </LinearLayout>
+
+                        </TableRow>
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_weight="1">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_weight="1">
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="225dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginTop="5dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/cat2" />
+                                <TextView
+                                    android:id="@+id/bag_name9"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="15dp"
+                                    android:textColor="#000"
+                                    android:gravity="center"
+                                    android:text="고양이"/>
+                                <TextView
+                                    android:id="@+id/bag_desc9"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12dp"
+                                    android:textColor="#666666"
+                                    android:gravity="center"
+                                    android:text="고양이"/>
+
+
+                            </LinearLayout>
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_weight="1">
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="225dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginTop="5dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/cat3" />
+                                <TextView
+                                    android:id="@+id/bag_name10"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="15dp"
+                                    android:textColor="#000"
+                                    android:gravity="center"
+                                    android:text="고양이"/>
+                                <TextView
+                                    android:id="@+id/bag_desc10"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12dp"
+                                    android:textColor="#666666"
+                                    android:gravity="center"
+                                    android:text="고양이"/>
+
+
+                            </LinearLayout>
+
+                        </TableRow>
+
+
 
                     </TableLayout>
 
