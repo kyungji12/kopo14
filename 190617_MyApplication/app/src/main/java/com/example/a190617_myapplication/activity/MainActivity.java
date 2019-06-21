@@ -6,7 +6,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -15,7 +14,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.example.a190617_myapplication.R;
 import com.example.a190617_myapplication.adapter.SectionsStatePagerAdapter;
 import com.example.a190617_myapplication.fragment.Fragment1_Top;
-import com.example.a190617_myapplication.fragment.Fragment2_bottom;
+import com.example.a190617_myapplication.fragment.Fragment2_bag;
 import com.example.a190617_myapplication.fragment.Fragment3_Dress;
 
 public class MainActivity extends AppCompatActivity {
@@ -58,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
     private void setupViewPaager(ViewPager viewPager){
         SectionsStatePagerAdapter adapter = new SectionsStatePagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new Fragment1_Top(), "Fragment1"); //0
-        adapter.addFragment(new Fragment2_bottom(), "Fragment2"); //1
+        adapter.addFragment(new Fragment2_bag(), "Fragment2"); //1
         adapter.addFragment(new Fragment3_Dress(), "Fragment3"); //2
         viewPager.setAdapter(adapter);
     }
@@ -82,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 return true;
             case android.R.id.home:
-                Toast.makeText(this, "홈버튼 눌림 ", Toast.LENGTH_LONG).show();
+//                Toast.makeText(this, "홈버튼 눌림 ", Toast.LENGTH_LONG).show();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

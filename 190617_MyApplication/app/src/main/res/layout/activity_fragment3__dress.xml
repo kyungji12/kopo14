@@ -63,21 +63,73 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
 
-                        <ImageButton
+                        <LinearLayout
                             android:layout_width="195dp"
-                            android:layout_height="225dp"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginTop="5dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/cat1" />
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <ImageButton
+                                android:layout_width="195dp"
+                                android:layout_height="225dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="5dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/cat1" />
+                            <TextView
+                                android:id="@+id/dress_name1"
+                                android:layout_width="195dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="15dp"
+                                android:layout_marginLeft="8dp"
+                                android:textColor="#000"
+                                android:gravity="center"
+                                android:text="고양이"/>
+                            <TextView
+                                android:id="@+id/dress_desc1"
+                                android:layout_width="195dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="12dp"
+                                android:layout_marginLeft="8dp"
+                                android:textColor="#666666"
+                                android:gravity="center"
+                                android:text="고양이"/>
 
-                        <ImageButton
+
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
                             android:layout_width="195dp"
-                            android:layout_height="225dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginLeft="8dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/cat2" />
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <ImageButton
+                                android:layout_width="195dp"
+                                android:layout_height="225dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="5dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/cat2" />
+                            <TextView
+                                android:id="@+id/dress_name2"
+                                android:layout_width="195dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="15dp"
+                                android:layout_marginLeft="8dp"
+                                android:textColor="#000"
+                                android:gravity="center"
+                                android:text="고양이"/>
+                            <TextView
+                                android:id="@+id/dress_desc2"
+                                android:layout_width="195dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="12dp"
+                                android:layout_marginLeft="8dp"
+                                android:textColor="#666666"
+                                android:gravity="center"
+                                android:text="고양이"/>
+
+
+                        </LinearLayout>
 
                     </TableRow>
                     <TableRow
@@ -85,21 +137,71 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
 
-                        <ImageButton
+                        <LinearLayout
                             android:layout_width="195dp"
-                            android:layout_height="225dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginLeft="8dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/cat3" />
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <ImageButton
+                                android:layout_width="195dp"
+                                android:layout_height="225dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="5dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/cat3" />
+                            <TextView
+                                android:id="@+id/dress_name3"
+                                android:layout_width="195dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="15dp"
+                                android:layout_marginLeft="8dp"
+                                android:textColor="#000"
+                                android:gravity="center"
+                                android:text="고양이"/>
+                            <TextView
+                                android:id="@+id/dress_desc3"
+                                android:layout_width="195dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="12dp"
+                                android:layout_marginLeft="8dp"
+                                android:textColor="#666666"
+                                android:gravity="center"
+                                android:text="고양이"/>
 
-                        <ImageButton
+
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="195dp"
-                            android:layout_height="225dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginLeft="8dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/cat4" />
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <ImageButton
+                                android:layout_width="195dp"
+                                android:layout_height="225dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="5dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/cat4" />
+                            <TextView
+                                android:id="@+id/dress_name4"
+                                android:layout_width="195dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="15dp"
+                                android:layout_marginLeft="8dp"
+                                android:textColor="#000"
+                                android:gravity="center"
+                                android:text="고양이"/>
+                            <TextView
+                                android:id="@+id/dress_desc4"
+                                android:layout_width="195dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="12dp"
+                                android:layout_marginLeft="8dp"
+                                android:textColor="#666666"
+                                android:gravity="center"
+                                android:text="고양이"/>
+
+
+                        </LinearLayout>
 
                     </TableRow>
                     <TableRow
@@ -107,87 +209,73 @@
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
 
-                        <ImageButton
+                        <LinearLayout
                             android:layout_width="195dp"
-                            android:layout_height="225dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginLeft="8dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/cat5" />
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <ImageButton
+                                android:layout_width="195dp"
+                                android:layout_height="225dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="5dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/cat5" />
+                            <TextView
+                                android:id="@+id/dress_name5"
+                                android:layout_width="195dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="15dp"
+                                android:layout_marginLeft="8dp"
+                                android:textColor="#000"
+                                android:gravity="center"
+                                android:text="고양이"/>
+                            <TextView
+                                android:id="@+id/dress_desc5"
+                                android:layout_width="195dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="12dp"
+                                android:layout_marginLeft="8dp"
+                                android:textColor="#666666"
+                                android:gravity="center"
+                                android:text="고양이"/>
 
-                        <ImageButton
+
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
                             android:layout_width="195dp"
-                            android:layout_height="225dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginLeft="8dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/cat6" />
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <ImageButton
+                                android:layout_width="195dp"
+                                android:layout_height="225dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="5dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/cat6" />
+                            <TextView
+                                android:id="@+id/dress_name6"
+                                android:layout_width="195dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="15dp"
+                                android:layout_marginLeft="8dp"
+                                android:textColor="#000"
+                                android:gravity="center"
+                                android:text="고양이"/>
+                            <TextView
+                                android:id="@+id/dress_desc6"
+                                android:layout_width="195dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="12dp"
+                                android:layout_marginLeft="8dp"
+                                android:textColor="#666666"
+                                android:gravity="center"
+                                android:text="고양이"/>
 
-                    </TableRow>
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
 
-                        <ImageButton
-                            android:layout_width="195dp"
-                            android:layout_height="225dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginLeft="8dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/cat7" />
-
-                        <ImageButton
-                            android:layout_width="195dp"
-                            android:layout_height="225dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginLeft="8dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/cat1" />
-
-                    </TableRow>
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <ImageButton
-                            android:layout_width="195dp"
-                            android:layout_height="225dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginLeft="8dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/cat2" />
-
-                        <ImageButton
-                            android:layout_width="195dp"
-                            android:layout_height="225dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginLeft="8dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/cat3" />
-
-                    </TableRow>
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <ImageButton
-                            android:layout_width="195dp"
-                            android:layout_height="225dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginLeft="8dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/cat4" />
-
-                        <ImageButton
-                            android:layout_width="195dp"
-                            android:layout_height="225dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginLeft="8dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/cat5" />
+                        </LinearLayout>
 
                     </TableRow>
 

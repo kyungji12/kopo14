@@ -24,7 +24,7 @@ public class Fragment3_Dress extends Fragment {
         fm3_backBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent intent = new Intent(getActivity(), Fragment2_bottom.class);
+                Intent intent = new Intent(getActivity(), Fragment2_bag.class);
                 ((MainActivity)getActivity()).setmViewPager(1);
             }
         });

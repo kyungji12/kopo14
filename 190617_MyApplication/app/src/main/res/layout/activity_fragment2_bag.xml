@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.Fragment2_bag">
+
+        <LinearLayout
+            android:id="@+id/fm2_linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:id="@+id/fm2_linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/fm2_backBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_back_black_24dp" />
+
+                <Button
+                    android:id="@+id/fm2_categoryBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:paddingLeft="130dp"
+                    android:paddingRight="130dp"
+                    android:text="Bag"
+                    android:textAllCaps="false" />
+
+                <ImageButton
+                    android:id="@+id/fm2_forwardBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_forward_black_24dp" />
+            </LinearLayout>
+            <ScrollView
+                android:id="@+id/fm2_scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/fm2_linearLayout"
+                android:layout_centerHorizontal="true">
+
+                <LinearLayout
+                    android:id="@+id/fm2_linearLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="195dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <ImageButton
+                                    android:layout_width="195dp"
+                                    android:layout_height="225dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginTop="5dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/cat1" />
+                                <TextView
+                                    android:id="@+id/bag_name1"
+                                    android:layout_width="195dp"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="15dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:textColor="#000"
+                                    android:gravity="center"
+                                    android:text="고양이"/>
+                                <TextView
+                                    android:id="@+id/bag_desc1"
+                                    android:layout_width="195dp"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:textColor="#666666"
+                                    android:gravity="center"
+                                    android:text="고양이"/>
+
+
+                            </LinearLayout>
+
+
+
+                            <LinearLayout
+                                android:layout_width="195dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <ImageButton
+                                    android:layout_width="195dp"
+                                    android:layout_height="225dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginTop="5dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/cat2" />
+                                <TextView
+                                    android:id="@+id/bag_name2"
+                                    android:layout_width="195dp"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="15dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:textColor="#000"
+                                    android:gravity="center"
+                                    android:text="고양이"/>
+                                <TextView
+                                    android:id="@+id/bag_desc2"
+                                    android:layout_width="195dp"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:textColor="#666666"
+                                    android:gravity="center"
+                                    android:text="고양이"/>
+
+
+                            </LinearLayout>
+
+                        </TableRow>
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="195dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <ImageButton
+                                    android:layout_width="195dp"
+                                    android:layout_height="225dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginTop="5dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/cat3" />
+                                <TextView
+                                    android:id="@+id/bag_name3"
+                                    android:layout_width="195dp"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="15dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:textColor="#000"
+                                    android:gravity="center"
+                                    android:text="고양이"/>
+                                <TextView
+                                    android:id="@+id/bag_desc3"
+                                    android:layout_width="195dp"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:textColor="#666666"
+                                    android:gravity="center"
+                                    android:text="고양이"/>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="195dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <ImageButton
+                                    android:layout_width="195dp"
+                                    android:layout_height="225dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginTop="5dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/cat4" />
+                                <TextView
+                                    android:id="@+id/bag_name4"
+                                    android:layout_width="195dp"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="15dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:textColor="#000"
+                                    android:gravity="center"
+                                    android:text="고양이"/>
+                                <TextView
+                                    android:id="@+id/bag_desc4"
+                                    android:layout_width="195dp"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:textColor="#666666"
+                                    android:gravity="center"
+                                    android:text="고양이"/>
+
+
+                            </LinearLayout>
+
+                        </TableRow>
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="195dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <ImageButton
+                                    android:layout_width="195dp"
+                                    android:layout_height="225dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginTop="5dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/cat5" />
+                                <TextView
+                                    android:id="@+id/bag_name5"
+                                    android:layout_width="195dp"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="15dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:textColor="#000"
+                                    android:gravity="center"
+                                    android:text="고양이"/>
+                                <TextView
+                                    android:id="@+id/bag_desc5"
+                                    android:layout_width="195dp"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:textColor="#666666"
+                                    android:gravity="center"
+                                    android:text="고양이"/>
+
+
+                            </LinearLayout>
+
+
+
+                            <LinearLayout
+                                android:layout_width="195dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <ImageButton
+                                    android:layout_width="195dp"
+                                    android:layout_height="225dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginTop="5dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/cat6" />
+                                <TextView
+                                    android:id="@+id/bag_name6"
+                                    android:layout_width="195dp"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="15dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:textColor="#000"
+                                    android:gravity="center"
+                                    android:text="고양이"/>
+                                <TextView
+                                    android:id="@+id/bag_desc6"
+                                    android:layout_width="195dp"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:textColor="#666666"
+                                    android:gravity="center"
+                                    android:text="고양이"/>
+
+
+                            </LinearLayout>
+
+                        </TableRow>
+
+                    </TableLayout>
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

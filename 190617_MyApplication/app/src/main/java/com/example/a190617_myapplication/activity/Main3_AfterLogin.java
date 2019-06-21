@@ -6,9 +6,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
 import com.example.a190617_myapplication.R;
 
 public class Main3_AfterLogin extends AppCompatActivity {
@@ -19,7 +20,7 @@ public class Main3_AfterLogin extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3__after_login);
+        setContentView(R.layout.activity_main3__bookmark);
 
         //툴바 사용설정
         toolbar = findViewById(R.id.main3_app_toolbar);
@@ -57,7 +58,7 @@ public class Main3_AfterLogin extends AppCompatActivity {
 //                startActivity(intent);
 
             case android.R.id.home :
-                Toast.makeText(this, "홈버튼 눌림 ", Toast.LENGTH_LONG).show();
+//                Toast.makeText(this, "홈버튼 눌림 ", Toast.LENGTH_LONG).show();
                 return true;
 //            case R.id.action_threeline :
 //                ((TextView)findViewById(R.id.main1_title)).setText(("MENU"));

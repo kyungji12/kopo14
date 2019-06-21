@@ -14,7 +14,7 @@
         android:usesCleartextTraffic="true">
         <activity android:name=".activity.JoinActivity"></activity>
         <activity android:name=".fragment.Fragment3_Dress" />
-        <activity android:name=".fragment.Fragment2_bottom" />
+        <activity android:name=".fragment.Fragment2_bag" />
         <activity android:name=".fragment.Fragment1_Top" />
         <activity android:name=".activity.Main4_Class" />
         <activity android:name=".activity.Main3_AfterLogin" />

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageButton
+            android:id="@+id/custom_image1"
+            android:layout_width="195dp"
+            android:layout_height="225dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:scaleType="centerCrop"
+            />
+        <TextView
+            android:id="@+id/custom_name1"
+            android:layout_width="195dp"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_marginLeft="8dp"
+            android:textColor="#000"
+            android:gravity="center"
+            android:text="고양이"/>
+        <TextView
+            android:id="@+id/custom_desc1"
+            android:layout_width="195dp"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:layout_marginLeft="8dp"
+            android:textColor="#666666"
+            android:gravity="center"
+            android:text="고양이"/>
+    </LinearLayout>
+
+   </TableLayout>
